@@ -1,0 +1,473 @@
+/* start global */
+
+*{
+    box-sizing: border-box ; 
+    padding: 0px ; 
+    margin: 0px ; 
+}
+body{
+    font-family:Arial; 
+}
+.container{
+    width: 1200px ; 
+    margin: auto ; 
+}
+
+/* end global */
+
+
+
+/*   start header   */
+
+.header{
+    position: relative ; 
+    overflow: hidden ; 
+}
+
+/*start nav bar*/
+
+.header .navbar{
+    position: absolute ; 
+    width: 100% ; 
+    overflow: hidden;
+    background:none; 
+    color: #FFF ; 
+    font-size: 25px ; 
+}
+.header .navbar .brand{
+    text-align: left; 
+    width: 40% ; 
+    float: left; 
+    padding: 4px 0px 0px ; 
+}
+.header .navbar .brand h2{
+    text-transform: uppercase; 
+    padding: 2px 0px ; 
+}
+.header .navbar .links{
+    text-align: right; 
+    width: 60% ; 
+    margin: 0px ; 
+    list-style: none ; 
+    float: right ; 
+}
+.header .navbar .links li{
+    font-weight: bold ; 
+    cursor: pointer ; 
+    border-bottom: 2px solid transparent ;
+    text-transform: capitalize; 
+    display: inline-block ;
+    padding: 10px 0px 5px;
+    margin: 0px 15px ;
+}
+.header .navbar .links li:hover{
+    color: #1bbc9b ; 
+    border-bottom: 2px solid #1bbc9b ; 
+}
+.header .navbar .links li a{
+    text-decoration: none ; 
+    
+}
+
+/*   end nav bar     */
+
+.header .slider img{
+/*
+    width: 1920px ; 
+    height: 1275px ; 
+*/
+}
+.header .info{
+    overflow: hidden ;     
+    text-align: center ;
+    position: absolute ; 
+    top: 50% ; 
+    left: 50% ; 
+    transform: translate(-50%, -50%) ; 
+}
+.header .info h3{
+    text-transform: capitalize  ; 
+    font-size: 57px; 
+    font-weight: bolder ; 
+    color: #feffff ; 
+}
+.header .info h3 span{
+    color: #1bbc9d ; 
+}
+.header .info p{
+    color: #e3e3e2 ; 
+}
+.header button{
+    position: absolute ; 
+    top: 90% ; 
+    left: 50% ; 
+    transform: translate(-50%, -50%) ; 
+    color: #ffffff ; 
+    padding: 4px 8px ; 
+    border: 1px solid #1bbc9d ; 
+    background: none ; 
+    outline: none ; 
+    cursor: pointer ; 
+    font-size: 20px ;  
+    
+}
+
+/*   end header   */
+
+/*   start services*/
+
+.ser{
+    overflow: hidden ; 
+}
+.ser h2 {
+    color: #444444 ; 
+    margin: 60px 0px ; 
+}
+.ser h2 span{
+    border-bottom: 2px solid #1bbc9d ; 
+}
+.ser .flix{
+    display: flex ; 
+    justify-content:flex-start ; 
+    flex-flow: row wrap ; 
+    align-content: space-between ; 
+}
+.ser .flix article{
+    width: 33.33333% ; 
+    overflow: hidden ; 
+    margin: 10px 0px 20px ; 
+}
+.ser .flix article .icon{
+    text-align: center ; 
+    width: 30% ; 
+    float: left;  
+}
+
+.ser .flix article .icon i{
+    margin: 17px 0px ; 
+}
+
+.ser .flix article:hover > .icon i{
+    color: #1bbc9b ;  
+}
+
+.ser .flix article .info{
+    width: 70% ; 
+    float: right;  
+}
+.ser .flix article .info h2{
+    color: #575757 ; 
+    margin: 15px 0px    ; 
+}
+.ser .flix article .info p{
+    color: #acacac ; 
+    margin: 1px 0px ; 
+    line-height: 30px ; 
+}
+
+/*  end services*/
+
+
+/*  start team  */
+
+.team{
+    margin-bottom: 50px ; 
+    overflow: hidden; 
+}
+.team .left{
+    width: 40% ; 
+    float: left; 
+}
+.team .left h2{
+    margin: 60px 0px 40px ; 
+    text-transform: capitalize ; 
+}
+.team .left h2 span{
+    border-bottom: 1px solid #000 ; 
+}
+.team .left p{
+    color: #acacac ;
+    line-height: 23px ; 
+}
+.team ul{
+    margin-top: 60px ; 
+    text-align: right; 
+    width: 60% ;  
+    list-style: none ; 
+    float: right ; 
+}
+.team ul li{
+    margin-top: 60px ; 
+    cursor: pointer ; 
+    display: inline-block ;
+/*    padding: 10px 0px 5px;*/
+    margin: 0px 15px ;
+}
+.team ul li:last-child{
+    margin-right: 0px ; 
+}
+.team ul li img{
+    width: 130px ; 
+    height: 180px ; 
+}
+
+
+/*  end team    */
+
+
+/*  start client    */
+
+.test { 
+    height: 400px ; 
+    overflow: hidden ; 
+    position: relative ; 
+}
+.test .over{
+    position: absolute; 
+    top: 0px ;
+    left: 0px ;
+    z-index: 2 ; 
+    width: 100% ; 
+    height: 400px ; 
+    background-color: rgba(0, 0, 0, .7)  ; 
+}
+.test img{
+    width: 100% ;  
+    height: 100% ; 
+    position: absolute ; 
+    top: 0px ; 
+    left: 0px ; 
+    z-index: 1 ;
+}
+.test .info {
+    display: none ; 
+    text-align: center;
+    position: absolute; 
+    top: 50%; 
+    left: 50% ;
+    transform: translate(-50%, -50%) ; 
+    z-index: 3 ; 
+}
+.test .active{
+    display: block; 
+}
+.test .info h2{
+    text-transform: capitalize ; 
+    margin: 50px 0px ; 
+    font-size: 45px; 
+    font-weight: bolder ; 
+    color: #FFF ; 
+}
+.test .info h2 span{
+    border-bottom: 2px solid #1bbc9d ; 
+}
+.test .info q{
+    color: #acacac ;
+    font-size: 17px ;
+    display: block; 
+    line-height: 35px; 
+}
+
+.test .info p{
+    margin: 30px ; 
+    color:  #1bbc9b ; 
+}
+
+/*  end clients     */
+
+
+
+/*  start project   */
+.project {
+    margin-bottom: 100px ; 
+    overflow: hidden ; 
+}
+.project h2{
+    margin: 50px 0px ; 
+}
+.project ul{
+    text-align: left; 
+    margin: 0px 0px 50px ; 
+    list-style: none ;  
+}
+.project ul li{
+    font-weight: bold ; 
+    cursor: pointer ; 
+    text-transform: capitalize; 
+    display: inline-block ;
+    margin: 0px 15px ;
+    border: 1px solid #1bbc9b ; 
+    width: 80px ; 
+    text-align: center; 
+    padding: 4px 6px ; 
+}
+.project ul li:hover{
+    background-color: #1bbc9b ; 
+    color: #FFF ; 
+}
+.project ul li:first-child{
+    margin-left: 0px ; 
+}
+.project ul li.activee{
+    background-color: #1bbc9b ; 
+    color: #FFF ; 
+}
+.project .photos {
+    box-sizing: border-box ; 
+    display: flex ; 
+    flex-flow: row wrap ; 
+    justify-content: space-between ; 
+}
+.project .photos div{
+    position: relative ; 
+    margin: 0px 0px 30px 0px  ; 
+    background-size: cover ; 
+    width: 31.333333%; 
+    height: 200px ;
+}
+.project .photos div .overlay{
+    display: none ; 
+    cursor: pointer ; 
+    text-align: center ; 
+    position: absolute  ; 
+    top: 0px ; left: 0px ; right: 0px ; bottom: 0px ; 
+    width: 100% ; 
+    height: 100% ; 
+    background-color: rgba(27, 188, 155, .9); 
+}
+.project .photos div .overlay button{
+    position: relative ; 
+    top: 50% ; 
+    left: 50% ; 
+    font-weight: bold ; 
+    font-size: 20px ; 
+    padding: 4px 6px ; 
+    background: none ; 
+    outline: none  ;
+    cursor: pointer; 
+    transform: translate(-50%, -50%) ; 
+    border: 1px solid #FFF ; 
+    color: #FFF ; 
+}
+.project .photos div:nth-child(3),
+.project .photos div:nth-child(6){
+    margin-right: 0px ; 
+}
+.project .photos div img{
+    width: 100% ; 
+    height: inherit ; 
+}
+
+/*  end project       */
+
+
+/*  start footer    */
+.footer{
+    background-color: rgba(0, 0, 0, 1) ; 
+}
+.footer .c{
+    padding: 50px 0px ; 
+    box-sizing: border-box ; 
+    display: flex ; 
+    flex-flow: row wrap ; 
+    justify-content: space-between ; 
+}
+.footer .c .about,
+.footer .c .tags,
+.footer .c .blog{
+    width: 400px; 
+    margin: 0px ; 
+} 
+.footer .c .about h2{
+    text-transform: capitalize ; 
+    margin: 0px ; 
+    margin-bottom: 30px ; 
+    color: #FFF; 
+    font-weight: bolder ; 
+}
+.footer .c .about p{
+    color: #acacac ; 
+    line-height: 25px ; 
+}
+.footer .c .about ul{
+    list-style: none ; 
+    margin: 50px 0px 0px 0px; 
+}
+.footer .c .about ul li{
+    cursor: pointer; 
+    display: inline-block ; 
+    margin: 0px 5px 0px 0px ;
+    border: 1px solid  #1bbc9b ; 
+    padding: 4px 8px ; 
+    text-align: center ; 
+}
+.footer .c .about ul li a{
+    text-decoration: none ;
+    color: #1bbc9b ;
+}
+.footer .c .about ul li:hover a i{
+    color: #acacac ;
+}
+.footer .c .tags h2,
+.footer .c .blog h2{
+    text-transform: capitalize ; 
+    color: #FFF ; 
+    font-size: 20px ; 
+}
+.footer .c .tags .flex{
+    overflow: hidden; 
+    display: flex; 
+    width: 70% ; 
+    flex-flow: row wrap ; 
+    align-items: flex-start ; 
+    padding: 50px 0px ;
+    background-color: rgba(0, 0, 0, 1) ; 
+}
+.footer .c .tags .flex ul,
+.footer .c .blog ul{
+    list-style: none ;  
+}
+.footer .c .tags .flex ul li{
+    text-transform: capitalize; 
+    cursor: pointer; 
+    display: inline-block ; 
+    margin: 0px 5px 10px 0px ;
+    border: 1px solid  #1bbc9b ; 
+    padding: 4px 8px ; 
+    text-align: center ; 
+}
+.footer .c .tags .flex ul li a, 
+.footer .c .blog ul li a{
+    text-decoration: none ;
+    color: #1bbc9b ;
+}
+.footer .c .blog ul li a:hover{
+    color: #676767  ;
+}
+
+.footer .c .blog h2{
+    margin-bottom: 40px ; 
+}
+.footer .c .blog ul li{
+    text-transform: capitalize; 
+    margin: 10px 0px 20px ;
+    font-size: 20px ; 
+}
+/*  end footer   */
+
+
+
+/* start My Framwork */
+
+.header .navbar .links .active{
+    color: #1bbc9b ; 
+    border-bottom: 2px solid #1bbc9b ;  
+}
+
+.clearfloat{
+    clear: both ; 
+}
+
+/* start My Framwork */
+
+

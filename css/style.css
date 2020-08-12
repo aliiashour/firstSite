@@ -363,7 +363,7 @@ body{
 
 /*  start footer    */
 .footer{
-    background-color: rgba(0, 0, 0, 1) ; 
+    background-color: #232323 ; 
 }
 .footer .c{
     padding: 50px 0px ; 
@@ -421,7 +421,7 @@ body{
     flex-flow: row wrap ; 
     align-items: flex-start ; 
     padding: 50px 0px ;
-    background-color: rgba(0, 0, 0, 1) ; 
+    
 }
 .footer .c .tags .flex ul,
 .footer .c .blog ul{
@@ -455,7 +455,11 @@ body{
 }
 /*  end footer   */
 
-
+.copy{
+    background-color: #232323 ; 
+    text-align: center ; 
+    color: #acacac ; 
+}
 
 /* start My Framwork */
 
@@ -468,6 +472,6 @@ body{
     clear: both ; 
 }
 
-/* start My Framwork */
+/* end My Framwork */
 
 

@@ -27,10 +27,13 @@ body{
 /*start nav bar*/
 
 .header .navbar{
-    position: absolute ; 
+    background-color: rgba(0, 0, 0, 1) ; 
+    z-index: 5; 
+    position: fixed;
+    top: 0 ; 
+    padding:2px 0px ; 
     width: 100% ; 
     overflow: hidden;
-    background:none; 
     color: #FFF ; 
     font-size: 25px ; 
 }
@@ -118,10 +121,11 @@ body{
 
 .ser{
     overflow: hidden ; 
+    
 }
 .ser h2 {
     color: #444444 ; 
-    margin: 60px 0px ; 
+    margin: 60px 0px 60px 0px ; 
 }
 .ser h2 span{
     border-bottom: 2px solid #1bbc9d ; 
@@ -380,7 +384,7 @@ body{
 } 
 .footer .c .about h2{
     text-transform: capitalize ; 
-    margin: 0px ; 
+    margin-top: 0px ; 
     margin-bottom: 30px ; 
     color: #FFF; 
     font-weight: bolder ; 

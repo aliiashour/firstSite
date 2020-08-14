@@ -2,7 +2,10 @@ $(function(){
     
    'use strict' ; 
    
-   
+   // modify heade 
+    $("body").css({
+        paddingTop : $(".navbar").innerHeight() 
+    });
     
     // scroll to the wanted place
     
@@ -11,26 +14,52 @@ $(function(){
         $(this).parent().addClass("active").siblings().removeClass("active") ; 
         $("body, html").animate({
                 
-            scrollTop :  $("#" + $(this).data("value") ).offset().top 
+            scrollTop :  $("#" + $(this).data("value") ).offset().top + 1
         
         }, 1500) ; 
     
     });
-    
 
+
+
+    
+    
+    
+    
+// I did it but it has small bug with the footer part and it,s link :(
+
+    // sync selected the current part     
     $(window).scroll(function(){
         
-        if( scrollY == 0 ){
+        $("body > div").each(function(){
+            
+            // the current part i scroll to the sympole > is very important NOT use the sympole ==
+            
+            if( $(window).scrollTop() > $(this).offset().top ){
+                
+                // get the current part ID
 
-            $(".header .navbar .links li a:first").parent().addClass("active").siblings().removeClass("active") ;
-
-        }
-
-    });    
+                var id = $(this).attr("id") ;  
+                
+                // find the link with data value which equal to id
+                
+                $(".header .navbar .links li").removeClass("active") ; 
+                    
+                $('.header .navbar .links li a[data-value="'+ id +'"]').parent().addClass("active") ; 
+                
+            }
+                
+        });  
+    });
+    
+    if ($(window).scrollTop() == 2865){
+        console.log("last");
+    }
 
     // Modifiy the height of window
     
     var myheader=  $(".header") ; 
+    
     myheader.height($(window).height()) ; 
     
     $(window).resize(function(){

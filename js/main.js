@@ -2,6 +2,18 @@ $(function(){
     
    'use strict' ; 
    
+    
+    
+    
+    
+    // trigile slider
+    
+    $('.slider').bxSlider({
+        pager:true
+    });
+    
+    
+    
    // modify heade 
     $("body").css({
         paddingTop : $(".navbar").innerHeight() 
@@ -9,7 +21,7 @@ $(function(){
     
     // scroll to the wanted place
     
-    $(".header .navbar .links li a").click(function(){    
+    $(".navbar .links li a").click(function(){    
         
         $(this).parent().addClass("active").siblings().removeClass("active") ; 
         $("body, html").animate({
@@ -31,7 +43,7 @@ $(function(){
     // sync selected the current part     
     $(window).scroll(function(){
         
-        $("body > div").each(function(){
+        $("body > div[id]").each(function(){
             
             // the current part i scroll to the sympole > is very important NOT use the sympole ==
             
@@ -43,9 +55,9 @@ $(function(){
                 
                 // find the link with data value which equal to id
                 
-                $(".header .navbar .links li").removeClass("active") ; 
+                $(".navbar .links li").removeClass("active") ; 
                     
-                $('.header .navbar .links li a[data-value="'+ id +'"]').parent().addClass("active") ; 
+                $('.navbar .links li a[data-value="'+ id +'"]').parent().addClass("active") ; 
                 
             }
                 
@@ -61,9 +73,19 @@ $(function(){
     var myheader=  $(".header") ; 
     
     myheader.height($(window).height()) ; 
+
+//    // my slider position
+//    $(".header .bx-wrapper .bx-viewport").height($(window).height() - 45 / 2) ; 
+       
+    $(".header .slider").css("paddingTop", ($(window).height() - $(".slider div").height())/ 2)  ; 
     
     $(window).resize(function(){
-       myheader.height($(window).height()) ; 
+       
+        myheader.height($(window).height()) ; 
+        
+        // my slider dynamic height
+        
+        $(".header .slider").css("paddingTop", ($(window).height() - $(".slider div").height())/ 2) 
         
     });
     
